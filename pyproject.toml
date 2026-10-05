@@ -1,0 +1,45 @@
+# Configuration des outils pour l'ensemble du monorepo.
+# Chaque branche possède en plus son propre pyproject.toml (installable seule).
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+testpaths = ["socle/tests", "projets"]
+pythonpath = [
+    "socle/src",
+    "projets/manipulation/src",
+    "projets/navigation/src",
+    "projets/estimation/src",
+    "projets/commande/src",
+    "projets/vision/src",
+    "projets/drones/src",
+    "projets/locomotion/src",
+    "projets/essaims/src",
+    "projets/apprentissage/src",
+    "projets/planification/src",
+    "projets/ros2/robotique_ros",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = [
+    "socle/src",
+    "projets/manipulation/src",
+    "projets/navigation/src",
+    "projets/estimation/src",
+    "projets/commande/src",
+    "projets/vision/src",
+    "projets/drones/src",
+    "projets/locomotion/src",
+    "projets/essaims/src",
+    "projets/apprentissage/src",
+    "projets/planification/src",
+    "projets/ros2/robotique_ros",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+# E501 : la longueur des lignes de code est gérée par `ruff format` ; on tolère les
+# chaînes et docstrings un peu longues plutôt que de les couper artificiellement.
+# E741 : « l » désigne classiquement une longueur (bras, pendule) dans les équations.
+ignore = ["E501", "E741"]

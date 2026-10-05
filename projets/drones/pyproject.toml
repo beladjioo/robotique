@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drones"
+version = "0.1.0"
+description = "Branche drones : dynamique de quadrirotor, commande en cascade, trajectoires lisses."
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "robocore"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

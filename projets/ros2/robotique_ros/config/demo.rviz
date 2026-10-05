@@ -1,0 +1,38 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+    - Class: rviz_default_plugins/Map
+      Name: Carte
+      Enabled: true
+      Topic:
+        Value: /map
+        Durability Policy: Transient Local
+    - Class: rviz_default_plugins/Path
+      Name: Plan
+      Enabled: true
+      Topic:
+        Value: /plan
+        Durability Policy: Transient Local
+    - Class: rviz_default_plugins/Odometry
+      Name: Odometrie
+      Enabled: true
+      Topic:
+        Value: /odom
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+  Global Options:
+    Fixed Frame: odom
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Vue de dessus
+      Scale: 60
+      X: 5
+      Y: 2.4

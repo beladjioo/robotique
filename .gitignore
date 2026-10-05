@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+dist/
+
+# C++ / CMake
+build/
+cmake-build-*/
+
+# ROS 2 (colcon)
+install/
+log/
+
+# Sorties générées par les démos
+outputs/
+*.png
+!docs/**/*.png
+
+# Éditeurs / OS
+.vscode/
+.idea/
+.DS_Store

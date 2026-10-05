@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "commande"
+version = "0.1.0"
+description = "Branche commande : PID industriel, LQR, modèles de systèmes (moteur CC, pendule inversé)."
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "robocore"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

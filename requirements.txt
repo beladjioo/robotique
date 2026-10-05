@@ -1,0 +1,2 @@
+# Dépendances d'exécution communes à toutes les branches Python.
+numpy>=1.26
